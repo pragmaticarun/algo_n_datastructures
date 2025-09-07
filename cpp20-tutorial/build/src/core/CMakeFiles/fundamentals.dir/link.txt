@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/fundamentals.dir/link.d CMakeFiles/fundamentals.dir/fundamentals.cpp.o -o fundamentals

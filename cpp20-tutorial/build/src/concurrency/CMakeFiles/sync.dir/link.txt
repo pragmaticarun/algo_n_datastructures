@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/sync.dir/link.d CMakeFiles/sync.dir/sync.cpp.o -o sync

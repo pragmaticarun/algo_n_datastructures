@@ -1,0 +1,5 @@
+add_executable(containers containers.cpp)
+add_executable(ranges ranges.cpp)
+add_executable(views_span views_span.cpp)
+add_executable(optionals_variants optionals_variants.cpp)
+add_executable(span_bit_cast_source_location ../span_bit_cast_source_location.cpp)

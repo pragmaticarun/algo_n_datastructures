@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/chrono_fs_format.dir/link.d CMakeFiles/chrono_fs_format.dir/chrono_fs_format.cpp.o -o chrono_fs_format

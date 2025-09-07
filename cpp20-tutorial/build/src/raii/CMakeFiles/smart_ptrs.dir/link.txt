@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/smart_ptrs.dir/link.d CMakeFiles/smart_ptrs.dir/smart_ptrs.cpp.o -o smart_ptrs

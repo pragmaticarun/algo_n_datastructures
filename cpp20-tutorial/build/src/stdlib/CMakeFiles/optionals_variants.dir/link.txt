@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/optionals_variants.dir/link.d CMakeFiles/optionals_variants.dir/optionals_variants.cpp.o -o optionals_variants

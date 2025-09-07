@@ -26,6 +26,8 @@ Executables will be in `build/src/`.
 ./src/span_bit_cast_source_location
 ./src/coroutines_generator
 ./src/jthread_stop_token
+# modules (optional; enable with -DBUILD_MODULES=ON during configure)
+# ./src/modules/module_app
 ```
 
 ## What each example shows
@@ -50,6 +52,12 @@ Executables will be in `build/src/`.
   - `consteval` function must be evaluated at compile time.
   - `constinit` ensures static storage is initialized at compile time.
   - Abbreviated templates via `auto` parameters with constraints.
+
+- Containers and algorithms (`src/stdlib/containers.cpp`)
+  - `std::vector`, `std::map`, `std::unordered_map` usage with algorithms.
+
+- Ranges in STL algorithms (`src/stdlib/ranges.cpp`)
+  - Uses ranges-friendly `std::ranges::sort` and demonstrates pipeline composition.
 
 - `std::span`, `std::bit_cast`, `std::source_location` (`src/span_bit_cast_source_location.cpp`)
   - `std::span` for safe non-owning views.

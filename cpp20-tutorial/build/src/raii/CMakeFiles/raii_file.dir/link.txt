@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/raii_file.dir/link.d CMakeFiles/raii_file.dir/raii_file.cpp.o -o raii_file

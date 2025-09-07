@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/coroutine_generator.dir/link.d CMakeFiles/coroutine_generator.dir/__/coroutines_generator.cpp.o -o coroutine_generator

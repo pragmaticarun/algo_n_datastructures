@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/span_bit_cast_source_location.dir/link.d CMakeFiles/span_bit_cast_source_location.dir/__/span_bit_cast_source_location.cpp.o -o span_bit_cast_source_location

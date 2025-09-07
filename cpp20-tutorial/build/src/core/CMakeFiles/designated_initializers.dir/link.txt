@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/designated_initializers.dir/link.d CMakeFiles/designated_initializers.dir/designated_initializers.cpp.o -o designated_initializers

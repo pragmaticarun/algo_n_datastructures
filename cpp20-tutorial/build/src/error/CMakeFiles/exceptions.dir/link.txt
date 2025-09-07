@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/exceptions.dir/link.d CMakeFiles/exceptions.dir/exceptions.cpp.o -o exceptions

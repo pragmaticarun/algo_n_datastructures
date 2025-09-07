@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/error_codes.dir/link.d CMakeFiles/error_codes.dir/error_codes.cpp.o -o error_codes

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/random_example.dir/link.d CMakeFiles/random_example.dir/random_example.cpp.o -o random_example

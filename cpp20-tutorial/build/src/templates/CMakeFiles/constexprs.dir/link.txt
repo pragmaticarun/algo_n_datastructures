@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/constexprs.dir/link.d CMakeFiles/constexprs.dir/constexprs.cpp.o -o constexprs

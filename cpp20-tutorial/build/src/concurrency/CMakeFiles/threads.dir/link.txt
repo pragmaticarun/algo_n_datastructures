@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/threads.dir/link.d CMakeFiles/threads.dir/__/jthread_stop_token.cpp.o -o threads

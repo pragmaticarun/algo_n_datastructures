@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Xlinker --dependency-file=CMakeFiles/spaceship.dir/link.d CMakeFiles/spaceship.dir/spaceship.cpp.o -o spaceship
