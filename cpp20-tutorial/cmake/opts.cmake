@@ -1,3 +1,11 @@
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
+
+option(ENABLE_SANITIZERS "Enable Address/Undefined sanitizers" OFF)
+if(ENABLE_SANITIZERS AND CMAKE_BUILD_TYPE MATCHES "^(Debug|RelWithDebInfo)$")
+  if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
+    add_compile_options(-fsanitize=address,undefined -fno-omit-frame-pointer)
+    add_link_options(-fsanitize=address,undefined)
+  endif()
+endif()

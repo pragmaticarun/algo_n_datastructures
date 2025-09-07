@@ -1,0 +1,55 @@
+name: C++ CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build g++ clang
+      - name: Configure
+        run: |
+          cmake -S cpp20-tutorial -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build -j
+
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build clang
+      - name: Configure with sanitizers
+        run: |
+          cmake -S cpp20-tutorial -B build-sani -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_SANITIZERS=ON
+      - name: Build
+        run: cmake --build build-sani -j
+
+  clang-tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install clang-tidy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build clang-tidy
+      - name: Configure (export compile commands)
+        run: |
+          cmake -S cpp20-tutorial -B build-tidy -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+      - name: Run clang-tidy
+        run: |
+          files=$(git ls-files | grep '^cpp20-tutorial/.*\\.cpp$' || true)
+          if [ -n "$files" ]; then
+            clang-tidy -p build-tidy $files
+          fi

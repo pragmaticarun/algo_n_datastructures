@@ -1,0 +1,14 @@
+Checks: >
+  -*,
+  bugprone-* ,
+  performance-* ,
+  modernize-* ,
+  readability-* ,
+  cppcoreguidelines-avoid-magic-numbers,
+  cppcoreguidelines-special-member-functions,
+  clang-analyzer-*
+WarningsAsErrors: ''
+HeaderFilterRegex: 'cpp20-tutorial/.*'
+AnalyzeTemporaryDtors: false
+FormatStyle: none
+User: CI

@@ -1,0 +1,25 @@
+# Build folders
+build/
+cpp20-tutorial/build/
+
+# CMake artifacts
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/compile_commands.json
+
+# Object and archives
+**/*.o
+**/*.a
+**/*.so
+**/*.dylib
+**/*.dll
+**/*.exe
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.swp
+*.swo
